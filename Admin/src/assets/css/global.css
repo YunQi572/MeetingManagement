@@ -1,0 +1,267 @@
+html,
+body,
+#app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1366px;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* 主题色变量 */
+:root {
+    --primary-color: #409EFF;
+    --success-color: #67C23A;
+    --warning-color: #E6A23C;
+    --danger-color: #F56C6C;
+    --info-color: #909399;
+    --text-primary: #303133;
+    --text-regular: #606266;
+    --text-secondary: #909399;
+    --border-color: #DCDFE6;
+    --background-color: #F5F7FA;
+}
+
+/* 面包屑导航 */
+.el-breadcrumb {
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
+/* 表格样式 */
+.el-table {
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
+.el-table th {
+    background-color: #f5f7fa !important;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* 分页器 */
+.el-pagination {
+    margin-top: 20px;
+    padding: 10px 0;
+    text-align: right;
+}
+
+/* 级联选择器 */
+.el-cascader-menu {
+    height: 300px;
+}
+
+/* 步骤条 */
+.el-steps {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
+.el-step__title {
+    font-size: 14px;
+}
+
+/* 富文本编辑器 */
+.ql-editor {
+    min-height: 300px;
+}
+
+/* 卡片样式 */
+.el-card {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1) !important;
+}
+
+.el-card__header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ebeef5;
+    background-color: #f5f7fa;
+}
+
+/* 按钮样式 */
+.el-button {
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.el-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
+/* 表单样式 */
+.el-form-item__label {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* 输入框样式 */
+.el-input__inner {
+    border-radius: 4px;
+}
+
+/* 过渡动画 */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* 图标样式 */
+.el-icon {
+    font-size: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+    transition: all 0.3s;
+}
+
+.el-menu-item:hover .el-icon,
+.el-submenu__title:hover .el-icon {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+.el-menu-item.is-active .el-icon {
+    color: var(--primary-color);
+}
+
+/* 状态图标 */
+.status-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.status-success {
+    color: var(--success-color);
+}
+
+.status-warning {
+    color: var(--warning-color);
+}
+
+.status-danger {
+    color: var(--danger-color);
+}
+
+.status-info {
+    color: var(--info-color);
+}
+
+/* 操作图标 */
+.action-icon {
+    font-size: 16px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-icon:hover {
+    transform: scale(1.2);
+}
+
+.action-edit {
+    color: var(--primary-color);
+}
+
+.action-delete {
+    color: var(--danger-color);
+}
+
+.action-view {
+    color: var(--info-color);
+}
+
+/* 卡片图标 */
+.card-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* 统计图标 */
+.stat-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* 导航图标 */
+.nav-icon {
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* 按钮图标 */
+.el-button [class*="el-icon-"]+span {
+    margin-left: 5px;
+}
+
+.el-button--text [class*="el-icon-"] {
+    margin-right: 5px;
+}
+
+/* 表格操作列图标 */
+.el-table .cell .el-icon {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* 表单图标 */
+.el-form-item__label .el-icon {
+    margin-right: 5px;
+}
+
+/* 加载图标 */
+.loading-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
