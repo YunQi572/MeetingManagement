@@ -34,7 +34,8 @@ public class IntercepterConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOriginPatterns("http://localhost:4002", "http://127.0.0.1:4002")
+                .allowedOriginPatterns("http://localhost:4000", "http://localhost:4001", "http://localhost:4002",
+                        "http://127.0.0.1:4000", "http://127.0.0.1:4001", "http://127.0.0.1:4002")
                 .allowedMethods("GET", "HEAD", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true)
                 .maxAge(3600)

@@ -1,0 +1,30 @@
+@startuml 用户申请会议室流程图
+
+autonumber
+
+actor 用户 as User
+participant "会议室系统" as System
+database "数据库" as DB
+
+User -> System: 登录系统
+System --> User: 返回登录结果
+
+User -> System: 查询可用会议室
+System -> DB: 查询会议室数据
+DB --> System: 返回会议室列表
+System --> User: 显示可用会议室列表
+
+User -> System: 选择会议室和时间段
+User -> System: 提交预约申请
+System -> DB: 检查时间冲突
+DB --> System: 返回检查结果
+
+alt 预约成功
+    System -> DB: 保存预约信息
+    DB --> System: 保存成功
+    System --> User: 预约确认通知
+else 预约失败
+    System --> User: 预约失败通知(时间冲突/已被预订)
+end
+
+@enduml

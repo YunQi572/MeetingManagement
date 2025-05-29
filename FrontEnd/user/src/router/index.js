@@ -9,6 +9,13 @@ import NotApproved from '../components/history/NotApproved.vue'
 import Approving from '../components/history/Approving'
 import Book from '../components/book/Book.vue'
 import CancelBook from '../components/book/CancelBook.vue'
+// 线上会议室相关组件
+import OnlineBook from '../components/book/OnlineBook.vue'
+import CancelOnlineBook from '../components/book/CancelOnlineBook.vue'
+import OnlineApproved from '../components/history/OnlineApproved.vue'
+import OnlineNotApproved from '../components/history/OnlineNotApproved.vue'
+import OnlineApproving from '../components/history/OnlineApproving.vue'
+import OnlineHistory from '../components/history/OnlineHistory.vue'
 
 Vue.use(VueRouter)
 
@@ -16,17 +23,25 @@ const routes = [
   { path: '/', redirect: '/login' },
   { path: '/login', component: Login },
   {
-      path: '/home',
-      component: Home,
-      redirect: '/book',
-      children: [
-        { path: '/Welcome', component: Welcome },
-        { path: '/approved', component: Approved },
-        { path: '/history', component: History },
-        { path: '/notApproved', component: NotApproved },
-        { path: '/approving', component: Approving },
-        { path: '/book', component: Book },
-        { path: '/cancelBook', component: CancelBook }
+    path: '/home',
+    component: Home,
+    redirect: '/book',
+    children: [
+      { path: '/Welcome', component: Welcome },
+      // 实体会议室
+      { path: '/approved', component: Approved },
+      { path: '/history', component: History },
+      { path: '/notApproved', component: NotApproved },
+      { path: '/approving', component: Approving },
+      { path: '/book', component: Book },
+      { path: '/cancelBook', component: CancelBook },
+      // 线上会议室
+      { path: '/onlineApproved', component: OnlineApproved },
+      { path: '/onlineHistory', component: OnlineHistory },
+      { path: '/onlineNotApproved', component: OnlineNotApproved },
+      { path: '/onlineApproving', component: OnlineApproving },
+      { path: '/onlineBook', component: OnlineBook },
+      { path: '/cancelOnlineBook', component: CancelOnlineBook }
     ]
   }
 ]

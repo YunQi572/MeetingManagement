@@ -20,8 +20,10 @@ com\zhku\meeting\controller\LoginController.class
 com\zhku\meeting\entities\ApplicationRecord.class
 com\zhku\meeting\Annotation\loginCharacter.class
 com\zhku\meeting\entities\Department.class
+com\zhku\meeting\controller\MeetingRecordController.class
 com\zhku\meeting\mapper\ApplicationRecordMapper.class
 com\zhku\meeting\service\LoginService.class
+com\zhku\meeting\config\CorsConfig.class
 com\zhku\meeting\mapper\ManagerMapper.class
 com\zhku\meeting\mapper\ShowStatusMapper.class
 com\zhku\meeting\entities\MeetingRecord.class

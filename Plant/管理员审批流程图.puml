@@ -1,0 +1,61 @@
+@startuml 管理员审批会议室申请流程
+
+skinparam handwritten false
+skinparam backgroundColor white
+skinparam defaultFontName "Microsoft YaHei"
+skinparam sequence {
+    ArrowColor DeepSkyBlue
+    ActorBorderColor DeepSkyBlue
+    LifeLineBorderColor blue
+    LifeLineBackgroundColor #A9DCDF
+    
+    ParticipantBorderColor DeepSkyBlue
+    ParticipantBackgroundColor DodgerBlue
+    ParticipantFontName "Microsoft YaHei"
+    ParticipantFontSize 17
+    ParticipantFontColor #FFFFFF
+}
+
+actor 用户 as User
+actor 管理员 as Admin
+participant "系统" as System
+
+== 提交申请 ==
+User -> System: 提交会议室申请
+activate System
+System -> System: 保存申请信息
+System -> Admin: 发送审批通知
+deactivate System
+
+== 管理员审批 ==
+Admin -> System: 登录系统查看申请列表
+activate System
+System -> Admin: 显示待审批申请列表
+deactivate System
+
+Admin -> System: 查看申请详情
+activate System
+System -> Admin: 显示申请详细信息
+deactivate System
+
+alt 批准申请
+    Admin -> System: 批准申请
+    activate System
+    System -> System: 更新申请状态为"已批准"
+    System -> User: 发送批准通知
+    deactivate System
+else 拒绝申请
+    Admin -> System: 拒绝申请
+    activate System
+    System -> System: 更新申请状态为"已拒绝"
+    System -> User: 发送拒绝通知
+    deactivate System
+end
+
+== 申请结果 ==
+User -> System: 查看申请结果
+activate System
+System -> User: 显示申请状态和结果
+deactivate System
+
+@enduml

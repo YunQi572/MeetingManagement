@@ -69,16 +69,44 @@ export default {
                     { id: 1023, authName: '审核中', path: 'approving' },
                     { id: 1024, authName: '查看历史会议', path: 'history' }
                 ]
+                },
+                {
+                id: 103,
+                authName: '线上会议室',
+                path: 'null',
+                children: [
+                    { id: 1031, authName: '线上会议室预约', path: 'onlineBook' },
+                    { id: 1032, authName: '取消线上预约', path: 'cancelOnlineBook' }
+                ]
+                },
+                {
+                id: 104,
+                authName: '线上会议记录',
+                path: 'null',
+                children: [
+                    { id: 1041, authName: '线上已通过', path: 'onlineApproved' },
+                    { id: 1042, authName: '线上未通过', path: 'onlineNotApproved' },
+                    { id: 1043, authName: '线上审核中', path: 'onlineApproving' },
+                    { id: 1044, authName: '线上会议历史', path: 'onlineHistory' }
+                ]
                 }],
             iconsObj: {
                 101: 'iconfont icon-baobiao',
                 102: 'iconfont icon-users',
+                103: 'el-icon-video-camera',
+                104: 'el-icon-document',
                 1011: 'el-icon-circle-plus',
                 1012: 'el-icon-error',
                 1021: 'el-icon-folder-checked',
                 1022: 'el-icon-folder-opened',
                 1023: 'el-icon-loading',
-                1024: 'el-icon-document-copy'
+                1024: 'el-icon-document-copy',
+                1031: 'el-icon-video-play',
+                1032: 'el-icon-video-pause',
+                1041: 'el-icon-check',
+                1042: 'el-icon-close',
+                1043: 'el-icon-refresh',
+                1044: 'el-icon-collection'
             },
             isCollapse: false,
             activePath: ''
